@@ -17,6 +17,8 @@ int doesRepeat(char * string, int leftLimit, int rightLimit)
 int lengthOfLongestSubstring(char* s)
 { 
     int len=0,answer=0;
+    if((*s)=='\0')
+    return 0;
     while((s[++len])!='\0');//length detector
     for(int ptr1=len-1;ptr1>=0;ptr1--)
     {
@@ -41,7 +43,7 @@ int lengthOfLongestSubstring(char* s)
 
 int main()
 {
-    char s[] = "jkiksjfd";
+    char s[] = "";
     int result = lengthOfLongestSubstring(s);
     printf("\n%d\n", result);
     return 0;
